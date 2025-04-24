@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robertson's Hams - Premium Hams & Beef Jerky Since 1947</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Open Sans', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        serif: ['Playfair Display', 'ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+                    },
+                    colors: {
+                        red: {
+                            800: '#8B0000',
+                        },
+                        amber: {
+                            800: '#8B4513',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-link {
+            @apply text-gray-700 hover:text-red-800 transition-colors duration-200 font-medium;
+        }
+        .btn-primary {
+            @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-red-800 text-white hover:bg-red-900 focus:ring-red-600;
+        }
+        .header-scrolled {
+            @apply bg-white shadow-md py-2;
+        }
+        .header-transparent {
+            @apply bg-transparent py-4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-transparent">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <a href="#" class="flex items-center">
+                <span class="font-serif font-bold text-2xl text-red-800">Robertson's</span>
+                <span class="font-serif font-medium text-xl ml-1 text-amber-800">Hams</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="btn-primary">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen max-h-[800px] min-h-[600px] flex items-center justify-center">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/homepager.jpg')"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center text-white">
+            <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight">
+                Premium Hams & Beef Jerky
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-gray-100">
+                Family tradition since 1947, featuring the finest quality meats smoked to perfection
+            </p>
+            <a href="#products" class="btn-primary text-lg px-8 py-4">
+                Shop Our Products
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold">Featured Products</h2>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+                    Discover our most popular premium meats, prepared with traditional recipes passed down through generations.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="/images/hamstandgood.jpg" alt="Family business heritage" class="rounded-lg shadow-lg w-full h-auto">
+                    <div class="absolute -bottom-6 -right-6 bg-red-800 text-white p-6 rounded-lg shadow-lg hidden md:block">
+                        <p class="font-serif text-3xl font-bold">Since 1947</p>
+                        <p class="text-red-100">Family-owned & operated</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-gray-900">Our Story</h2>
+                    <p class="text-gray-700 mb-6">
+                        Robertson's Hams has been a family tradition since 1947. What started as a small, local business in Southern Oklahoma has grown into a beloved regional brand known for quality meats prepared the old-fashioned way.
+                    </p>
+                    <p class="text-gray-700 mb-8">
+                        Our recipes have been passed down through generations, and we still smoke our hams and beef jerky using traditional methods that give them their distinctive flavor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="font-serif text-3xl font-bold mb-6">Visit Our Store</h2>
+                    <p class="text-gray-700 mb-8">
+                        Stop by our store in Marietta, Oklahoma to see our complete selection and take home fresh products.
+                    </p>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-medium text-gray-900">Location</h3>
+                            <p class="text-gray-700">110 Wanda St, Marietta, OK 73448</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-900">Hours</h3>
+                            <p class="text-gray-700">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                            <p class="text-gray-700">Saturday: 9:00 AM - 5:00 PM</p>
+                            <p class="text-gray-700">Sunday: Closed</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-900">Contact</h3>
+                            <p class="text-gray-700">
+                                <a href="tel:5802766301" class="text-red-800 hover:underline">(580) 276-6301</a>
+                            </p>
+                            <p class="text-gray-700">
+                                <a href="mailto:info@robertsonsonline.com" class="text-red-800 hover:underline">info@robertsonsonline.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[400px]">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.8815718492657!2d-97.12251599999999!3d33.935783899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86474b2d95555555%3A0x1585ede781e915e4!2sRobertson&#39;s%20Hams!5e0!3m2!1sen!2sus!4v1715444851043!5m2!1sen!2sus"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-serif text-xl mb-4">Robertson's Hams</h3>
+                    <p class="text-gray-300 mb-4">
+                        Providing the highest quality hams and beef jerky since 1947. Family-owned and operated.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Store Hours</h4>
+                    <ul class="text-gray-300 space-y-1">
+                        <li class="flex justify-between">
+                            <span>Monday - Friday:</span>
+                            <span>8:00 AM - 6:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday:</span>
+                            <span>9:00 AM - 5:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday:</span>
+                            <span>Closed</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <span class="text-gray-300">110 Wanda St, Marietta, OK 73448</span>
+                        </li>
+                        <li>
+                            <a href="tel:5802766301" class="text-gray-300 hover:text-white transition-colors">
+                                (580) 276-6301
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-gray-700 my-8">
+            <div class="text-center text-gray-400 text-sm">
+                <p>&copy; <span id="year"></span> Robertson's Hams. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.remove('header-transparent');
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+                header.classList.add('header-transparent');
+            }
+        });
+
+        // Update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Product data
+        const featuredProducts = [
+            {
+                name: 'Real Beef Jerky',
+                description: 'Our signature beef jerky made from premium cuts of beef, perfectly seasoned and slowly smoked for maximum flavor.',
+                price: 16.99,
+                imageUrl: '/images/real-beef-jerky.jpg'
+            },
+            {
+                name: 'Smoked Ham',
+                description: 'Traditional hickory-smoked ham, cured and prepared using time-honored methods for exceptional flavor.',
+                price: 79.99,
+                imageUrl: '/images/sugar-cured-hickory-smoked.jpg'
+            },
+            {
+                name: 'Smoked Turkey',
+                description: 'Whole turkey, slow-smoked to perfection with our signature blend of seasonings.',
+                price: 49.99,
+                imageUrl: '/images/turkeybreast.jpg'
+            },
+            {
+                name: 'Smoked Bacon',
+                description: 'Premium bacon, hickory-smoked and hand-cut for the perfect breakfast experience.',
+                price: 9.99,
+                imageUrl: '/images/sliced-slab-bacon.jpg'
+            }
+        ];
+
+        // Render product cards
+        const productsContainer = document.querySelector('#products .grid');
+        featuredProducts.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1';
+            card.innerHTML = `
+                <div class="relative overflow-hidden">
+                    <img src="${product.imageUrl}" alt="${product.name}" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-serif text-xl font-semibold mb-1 text-gray-900">${product.name}</h3>
+                    <p class="text-gray-600 mb-3 line-clamp-2">${product.description}</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-red-800 font-semibold text-lg">$${product.price.toFixed(2)}</span>
+                        <button class="bg-red-800 text-white px-4 py-2 rounded-md hover:bg-red-900 transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            `;
+            productsContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>
